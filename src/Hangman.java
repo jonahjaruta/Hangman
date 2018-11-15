@@ -17,9 +17,9 @@ public class Hangman {
             System.out.println("Guess a letter in the word.");
             System.out.println(underscore);
             String guess = keyboard.next();
+
             hang(guess);
         }
-        keyboard.close();
     }
 
     public static void hang(String guess) {
@@ -27,6 +27,7 @@ public class Hangman {
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == guess.charAt(0)) {
                 newUnderscore += guess.charAt(0);
+                tries++;
             } else if (underscore.charAt(i) != '_') {
                 newUnderscore += word.charAt(i);
             } else {
@@ -42,6 +43,7 @@ public class Hangman {
         }
         if (underscore.equals(word)) {
             System.out.println("Correct! You win! The word was " + word);
+            System.out.println("You finished the game in " + tries + " tries.");
         }
     }
 
