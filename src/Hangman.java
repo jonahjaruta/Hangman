@@ -28,6 +28,7 @@ public class Hangman {
             if (word.charAt(i) == guess.charAt(0)) {
                 newUnderscore += guess.charAt(0);
                 tries++;
+                System.out.println("You have " + (15 - tries) +  " tries remaining.");
             } else if (underscore.charAt(i) != '_') {
                 newUnderscore += word.charAt(i);
             } else {
@@ -51,7 +52,7 @@ public class Hangman {
         if (tries == 1) {
             System.out.println("Wrong guess, try again.");
             System.out.println("___|___");
-            System.out.println("You have 14 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 2) {
             System.out.println("Wrong guess, try again.");
@@ -65,7 +66,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 13 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 3) {
             System.out.println("Wrong guess, try again.");
@@ -80,7 +81,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 12 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 4) {
             System.out.println("Wrong guess, try again.");
@@ -95,7 +96,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 11 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 5) {
             System.out.println("Wrong guess, try again.");
@@ -110,7 +111,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 10 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 6) {
             System.out.println("Wrong guess, try again.");
@@ -125,7 +126,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 9 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 7) {
             System.out.println("Wrong guess, try again.");
@@ -140,7 +141,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 8 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 8) {
             System.out.println("Wrong guess, try again.");
@@ -155,7 +156,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 7 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 9) {
             System.out.println("Wrong guess, try again.");
@@ -170,7 +171,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 6 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 10) {
             System.out.println("Wrong guess, try again.");
@@ -185,7 +186,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 5 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 11) {
             System.out.println("Wrong guess, try again.");
@@ -200,7 +201,7 @@ public class Hangman {
             System.out.println("   |");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 4 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 12) {
             System.out.println("Wrong guess, try again.");
@@ -215,7 +216,7 @@ public class Hangman {
             System.out.println("   |        /   \\");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 3 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 13) {
             System.out.println("Wrong guess, try again.");
@@ -230,7 +231,7 @@ public class Hangman {
             System.out.println("   |       _/   \\_");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 2 tries remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 14) {
             System.out.println("Wrong guess, try again.");
@@ -245,7 +246,7 @@ public class Hangman {
             System.out.println("   |       _/   \\_");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("You have 1 try remaining.");
+            System.out.println("You have " + (15 - tries) +  " tries remaining.");
         }
         if (tries == 15) {
             System.out.println("Wrong guess, try again.");
