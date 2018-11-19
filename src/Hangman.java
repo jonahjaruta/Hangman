@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class Hangman {
 
-    private static String[] wordList = {"toaster", "dinosaur", "keyboard", "gorilla", "motherboard", "pineapple", "butterfly" };
+    //initialize
+
+    private static String[] wordList = {"toaster", "dinosaur", "keyboard", "gorilla", "mother", "apple", "butterfly", "bean" };
     private static String word = wordList[(int) (Math.random() * wordList.length)];
     private static String underscore = new String(new char[word.length()]).replace("\0", "_");
     private static int tries = 0;
@@ -27,7 +29,6 @@ public class Hangman {
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == guess.charAt(0)) {
                 newUnderscore += guess.charAt(0);
-                tries++;
                 System.out.println("You have " + (15 - tries) +  " tries remaining.");
             } else if (underscore.charAt(i) != '_') {
                 newUnderscore += word.charAt(i);
@@ -255,14 +256,14 @@ public class Hangman {
             System.out.println("   | L       _|_");
             System.out.println("   |        | | |");
             System.out.println("   |       _| | |_");
-            System.out.println("   | You Lose |");
             System.out.println("   |          |");
+            System.out.println("   | You Lose |");
             System.out.println("   |         / \\");
             System.out.println("   |       _/   \\_");
             System.out.println("   |");
             System.out.println("___|___");
-            System.out.println("Game over! The word was " + word);
-            System.out.println("Try again to win!");
+            System.out.println("Game over! You have reached 15 tries.");
+            System.out.println("The correct phrase was " + word);
 
 
         }
