@@ -6,7 +6,7 @@ public class Hangman {
 
     private static String[] wordList = {"toaster", "dinosaur", "keyboard", "gorilla", "mother", "apple", "butterfly", "bean" };
     private static String word = wordList[(int) (Math.random() * wordList.length)];
-    private static String underscore = new String(new char[word.length()]).replace("\0", "_");
+    private static String underscore = new String(new char[word.length()]).replace("\0", "-");
     private static int tries = 0;
 
     public static void main(String[] args) {
@@ -15,25 +15,25 @@ public class Hangman {
         System.out.println("Welcome to hangman!");
         System.out.println("You will have 15 tries to attempt to win the game.");
 
-        while (tries < 15 && underscore.contains("_")) {
+        while (tries < 15 && underscore.contains("-")) {
             System.out.println("Guess a letter in the word.");
             System.out.println(underscore);
             String guess = keyboard.next();
 
-            hang(guess);
+            hangguy(guess);
         }
     }
 
-    public static void hang(String guess) {
+    public static void hangguy(String guess) {
         String newUnderscore = "";
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == guess.charAt(0)) {
                 newUnderscore += guess.charAt(0);
                 System.out.println("You have " + (15 - tries) +  " tries remaining.");
-            } else if (underscore.charAt(i) != '_') {
+            } else if (underscore.charAt(i) != '-') {
                 newUnderscore += word.charAt(i);
             } else {
-                newUnderscore += "_";
+                newUnderscore += "-";
             }
         }
 
