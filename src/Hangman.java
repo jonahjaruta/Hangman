@@ -9,6 +9,8 @@ public class Hangman {
     private static String underscore = new String(new char[word.length()]).replace("\0", "-");
     private static int tries = 0;
 
+    //Main Intro
+
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
 
@@ -23,6 +25,8 @@ public class Hangman {
             hangguy(guess);
         }
     }
+
+    //Player Guessing
 
     public static void hangguy(String guess) {
         String newUnderscore = "";
@@ -56,6 +60,8 @@ public class Hangman {
             System.out.println("      /     \\      ");
         }
     }
+
+    //Hangman Display
 
     public static void hangmanPicture() {
         if (tries == 1) {
